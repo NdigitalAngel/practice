@@ -1,0 +1,28 @@
+{
+    "esversion": 6,
+    "editor.fontSize": 16,
+    "workbench.iconTheme": "helium-icon-theme",
+    "[html]": {
+        "editor.defaultFormatter": "HookyQR.beautify"
+    },
+    "editor.tabSize": 2,
+    "editor.fontFamily": "Jetbrains Mono",
+    "editor.fontLigatures": true,
+    "window.zoomLevel": 1,
+    "emmet.triggerExpansionOnTab": true,
+    "liveServer.settings.donotShowInfoMsg": true,
+    "workbench.colorTheme": "Dracula",
+    "terminal.integrated.defaultProfile.windows": "Git Bash",
+    "[scss]": {
+        "editor.defaultFormatter": "HookyQR.beautify"
+    },
+    "explorer.confirmDelete": false,
+    "jshint.config": "",
+    "jshint.options": {
+
+        "esversion": 8
+    },
+    "eslint.nodeEnv": "",
+    "eslint.nodePath": "",
+    "node": true
+}
