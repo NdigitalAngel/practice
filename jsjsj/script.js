@@ -166,17 +166,34 @@ const personalMovieDB = {
   genres: [],
   privat: false
  };
- console.log(Object.keys(personalMovieDB).length);
-//  console.log(personalMovieDB["actors"]["colors"]);
-let counter = 0;
- for (let key in personalMovieDB) {
-   if (typeof(personalMovieDB[key]) === 'object') {
-      for (let i in personalMovieDB[key]) {
-      console.log(`Asjhio ${i} asfjhasf ${personalMovieDB[key][i]}`);
-      counter++;
-    }
-  }
-    console.log(`Asjhio ${key} asfjhasf ${personalMovieDB[key]}`);
-  counter++;
-}
-console.log(counter);
+//  console.log(Object.keys(personalMovieDB).length);
+// //  console.log(personalMovieDB["actors"]["colors"]);
+//  for (let key in personalMovieDB) {
+//    if (typeof(personalMovieDB[key]) === 'object') {
+//       for (let i in personalMovieDB[key]) {
+//       console.log(`Asjhio ${i} asfjhasf ${personalMovieDB[key][i]}`);
+//     }
+//   }
+//     console.log(`Asjhio ${key} asfjhasf ${personalMovieDB[key]}`);
+// }
+personalMovieDB.genres.push('asd');
+console.log(personalMovieDB.genres);
+
+
+const arr = [1, 2, 3, 4, 8, 12];
+
+arr.forEach(function(item, i, arr) {
+  console.log(`${i}: ${item} внутри массива ${arr}`);
+});
+
+
+// arr.pop();
+// console.log(arr);
+// arr.push(12);
+// console.log(arr);
+// for (let i = 0; i < arr.length; i++) {
+//   console.log(arr[i]);
+// }
+// for (let value of arr) {
+//   console.log(value);
+// }
