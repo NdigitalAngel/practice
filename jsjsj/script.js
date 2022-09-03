@@ -166,16 +166,16 @@ const personalMovieDB = {
   genres: [],
   privat: false
  };
-//  console.log(Object.keys(personalMovieDB).length);
-// //  console.log(personalMovieDB["actors"]["colors"]);
-//  for (let key in personalMovieDB) {
-//    if (typeof(personalMovieDB[key]) === 'object') {
-//       for (let i in personalMovieDB[key]) {
-//       console.log(`Asjhio ${i} asfjhasf ${personalMovieDB[key][i]}`);
-//     }
-//   }
-//     console.log(`Asjhio ${key} asfjhasf ${personalMovieDB[key]}`);
-// }
+ console.log(Object.keys(personalMovieDB).length);
+//  console.log(personalMovieDB["actors"]["colors"]);
+ for (let key in personalMovieDB) {
+   if (typeof(personalMovieDB[key]) === 'object') {
+      for (let i in personalMovieDB[key]) {
+      console.log(`Asjhio ${i} asfjhasf ${personalMovieDB[key][i]}`);
+    }
+  }
+    console.log(`Asjhio ${key} asfjhasf ${personalMovieDB[key]}`);
+}
 personalMovieDB.genres.push('asd');
 console.log(personalMovieDB.genres);
 
@@ -284,6 +284,39 @@ console.log(newQ);
 
 
 
+// const personalPlanPeter = {
+//   name: "Peter",
+//   age: "29",
+//   skills: {
+//       languages: ['ru', 'eng'],
+//       programmingLangs: {
+//           js: '20%',
+//           php: '10%'
+//       },
+//       exp: '1 month'
+//   }
+// };
+
+// function showExperience(plan) {
+  
+//   const {exp} = pla.skills;
+//   console.log(exp);
+// }
+// console.log(showExperience(personalPlanPeter));
+
+// console.log(Object.keys(personalMovieDB).length);
+//  console.log(personalMovieDB["actors"]["colors"]);
+ for (let key in personalMovieDB) {
+   if (typeof(personalMovieDB[key]) === 'object') {
+      for (let i in personalMovieDB[key]) {
+      console.log(`Asjhio ${i} asfjhasf ${personalMovieDB[key][i]}`);
+    }
+  }
+    console.log(`Asjhio ${key} asfjhasf ${personalMovieDB[key]}`);
+}
+personalMovieDB.genres.push('asd');
+console.log(personalMovieDB.genres);
+
 const personalPlanPeter = {
   name: "Peter",
   age: "29",
@@ -297,9 +330,12 @@ const personalPlanPeter = {
   }
 };
 
-function showExperience(plan) {
-  
-  const {exp} = pla.skills;
-  console.log(exp);
+function showProgrammingLangs(plan) {
+  let str = '';
+  const {programmingLangs} = plan.skills;
+  for (let key in programmingLangs) {
+    str += `Язык ${key} изучен на ${programmingLangs[key]}\n`;
+  }
+  return str;
 }
-console.log(showExperience(personalPlanPeter));
+showProgrammingLangs(personalPlanPeter);
