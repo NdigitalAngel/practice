@@ -327,8 +327,21 @@ const personalPlanPeter = {
           php: '10%'
       },
       exp: '1 month'
+  },
+  showAgeAndLangs: function(plan) {
+    const {languages} = plan.skills;
+    const {age} = plan;
+    let str = `Мне ${age} и я владею языками: `;
+
+    languages.forEach(function(lang) {
+      str += `${lang.toUpperCase()} `;
+    });
+
+    return str;
   }
 };
+
+console.log(personalPlanPeter.showAgeAndLangs(personalPlanPeter));
 
 function showProgrammingLangs(plan) {
   let str = '';
@@ -338,4 +351,75 @@ function showProgrammingLangs(plan) {
   }
   return str;
 }
-showProgrammingLangs(personalPlanPeter);
+console.log(showProgrammingLangs(personalPlanPeter));
+
+
+const family = ['Peter', 'Ann', 'Alex', 'Linda'];
+
+function showFamily(arr) {
+  let str = '';
+
+  if (arr.length === 0) {
+    str = 'Семья пуста';
+  }else {
+    str = 'Семья состоит из: ';
+  }
+
+  arr.forEach(function(name) {
+    str += `${name} `;
+  });
+  return str;
+}
+
+console.log(showFamily(family));
+
+
+const favoriteCities = ['liSBon', 'ROME', 'miLan', 'Dublin'];
+favoriteCities.reverse();
+function standardizeStrings(arr) {
+    arr.forEach(function(city) {
+      console.log(`${city.toLowerCase()}`);
+    });
+}
+standardizeStrings(favoriteCities);
+
+
+const someString = 'This is some strange string';
+
+function reverse(str) {
+  if (typeof(str) !== 'string') {
+    return 'Ошибка!';
+  }
+  return str.split('').reverse().join('');
+}
+console.log(reverse(someString));
+
+
+
+const baseCurrencies = ['USD', 'EUR'];
+const additionalCurrencies = ['UAH', 'RUB', 'CNY'];
+
+function availableCurr(arr, missingCurr) {
+  let str = '';
+  arr.lenght === 0 ? str = 'Нет доступных валют' : str = "Достпуные валюты:\n";
+
+
+  let str = '';
+  arr.length === 0 ? str = 'Нет доступных валют' : str = 'Доступные валюты:\n';
+
+  arr.forEach(function(curr, i) {
+      if (curr !== missingCurr) {
+          str += `${curr}\n`;
+      }
+  });
+
+
+  arr.forEach(function(curr) {
+    if (curr !== missingCurr) {
+        str += `${curr}\n`;
+    }
+  });
+
+  return str;
+}
+console.log(availableCurr([...baseCurrencies, ...additionalCurrencies]));
