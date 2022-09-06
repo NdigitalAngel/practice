@@ -422,4 +422,4 @@ function availableCurr(arr, missingCurr) {
 
   return str;
 }
-console.log(availableCurr([...baseCurrencies, ...additionalCurrencies]));
+console.log(availableCurr([...baseCurrencies, ...additionalCurrencies]));;
