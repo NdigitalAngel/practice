@@ -5,7 +5,7 @@
     "[html]": {
         "editor.defaultFormatter": "HookyQR.beautify"
     },
-    "editor.tabSize": 2,
+    "editor.tabSize": 4,
     "editor.fontFamily": "Jetbrains Mono",
     "editor.fontLigatures": true,
     "window.zoomLevel": 1,

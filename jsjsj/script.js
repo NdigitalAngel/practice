@@ -31,14 +31,14 @@ function sayHello(name) {
 console.log(sayHello('Ivan'));
 
 function getMathResult(num, times) {
-  if(typeof(times) !== 'number' || times <= 0){
+  if (typeof (times) !== 'number' || times <= 0) {
     return num;
   }
   let str = '';
-  for (let i = 1;i <= times; i++) {
+  for (let i = 1; i <= times; i++) {
     if (i === times) {
       str += '${num * i}';
-    }else {
+    } else {
       str += '${num * i}---';
     }
   }
@@ -67,9 +67,9 @@ console.log(Math.round(cifra));
 
 
 function calculateVolumeAndArea(num) {
-  if(typeof(num) !== 'number' || num < 0 || !Number.isInteger(num)) {
+  if (typeof (num) !== 'number' || num < 0 || !Number.isInteger(num)) {
     return 'При вычислении произошла ошибка';
-  }else {
+  } else {
     return `Объем куба: ${num * num * num}, площадь всей поверхности: ${6 * (num * num)}`;
   }
 }
@@ -77,14 +77,14 @@ console.log(calculateVolumeAndArea(10));
 
 
 function getMathResult(num, times) {
-  if(typeof(times) !== 'number' || times <= 0){
+  if (typeof (times) !== 'number' || times <= 0) {
     return num;
   }
   let str = '';
-  for (let i = 1;i <= times; i++) {
+  for (let i = 1; i <= times; i++) {
     if (i === times) {
       str += '${num * i}';
-    }else {
+    } else {
       str += '${num * i}---';
     }
   }
@@ -95,63 +95,60 @@ console.log(getMathResult(16, 2));
 function getCoupeNumber(num) {
   if (num === 0 || num > 36) {
     return 'Таких мест в вагоне не существует';
-  }else if (typeof(num) !== 'number' || num < 0 || !Number.isInteger(num)) {
+  } else if (typeof (num) !== 'number' || num < 0 || !Number.isInteger(num)) {
     return 'Ошибка. Проверьте правильность введенного номера места';
   }
 
   for (let i = 4; i <= 36; i = i + 4) {
     if (num <= i) {
-        return Math.ceil(i / 4);
-    }   
-}
+      return Math.ceil(i / 4);
+    }
+  }
 }
 
 console.log(getCoupeNumber(5));
 
 function getTimeFromMinutes(minutesTotal) {
-  if (typeof(minutesTotal) !== 'number' || minutesTotal < 0 || !Number.isInteger(minutesTotal)) {
-      return "Ошибка, проверьте данные";
-      } 
-      const hours = Math.floor(minutesTotal / 60);
-      const minutes = minutesTotal % 60;
-      let hoursStr = '';
-      if (hours < 1) {
-        hoursStr = 'часов';
-      }
-      if (hours === 1) {
-        hoursStr = 'час';
-      }
-      if (hours > 1 && hours < 5) {
-        hoursStr = 'часа';
-      }
-      if (hours >= 5) {
-        hoursStr = 'часов';
-      }
-      return `Это ${hours} ${hoursStr} и ${minutes} минут`;
-    }
+  if (typeof (minutesTotal) !== 'number' || minutesTotal < 0 || !Number.isInteger(minutesTotal)) {
+    return "Ошибка, проверьте данные";
+  }
+  const hours = Math.floor(minutesTotal / 60);
+  const minutes = minutesTotal % 60;
+  let hoursStr = '';
+  if (hours < 1) {
+    hoursStr = 'часов';
+  }
+  if (hours === 1) {
+    hoursStr = 'час';
+  }
+  if (hours > 1 && hours < 5) {
+    hoursStr = 'часа';
+  }
+  if (hours >= 5) {
+    hoursStr = 'часов';
+  }
+  return `Это ${hours} ${hoursStr} и ${minutes} минут`;
+}
 console.log(getTimeFromMinutes(68));
 
 
-function findMaxNumber(a, b ,c, d) {
+function findMaxNumber(a, b, c, d) {
   // Самое простое - это использовать Math.max :)
   // А оптимизировать такую проверку мы научимся совсем скоро
-  if (typeof(a) !== 'number' ||
-      typeof(b) !== 'number' ||
-      typeof(c) !== 'number' ||
-      typeof(d) !== 'number') {
-      return 0;
-      }else if (a > b && a > c && a > d) {
-        return a;
-      }
-      else if (b > a && b > c && b > d) {
-        return b;
-      }
-      else if (c > a && c > b && c > d) {
-        return c;
-      }
-      else if (d > a && d > b && d > c) {
-        return d;
-      }
+  if (typeof (a) !== 'number' ||
+    typeof (b) !== 'number' ||
+    typeof (c) !== 'number' ||
+    typeof (d) !== 'number') {
+    return 0;
+  } else if (a > b && a > c && a > d) {
+    return a;
+  } else if (b > a && b > c && b > d) {
+    return b;
+  } else if (c > a && c > b && c > d) {
+    return c;
+  } else if (d > a && d > b && d > c) {
+    return d;
+  }
 }
 console.log(findMaxNumber(1, 4, 12, 2));
 console.log(findMaxNumber(1.2, 2.3, 1, 1.5));
@@ -165,16 +162,16 @@ const personalMovieDB = {
   },
   genres: [],
   privat: false
- };
- console.log(Object.keys(personalMovieDB).length);
+};
+console.log(Object.keys(personalMovieDB).length);
 //  console.log(personalMovieDB["actors"]["colors"]);
- for (let key in personalMovieDB) {
-   if (typeof(personalMovieDB[key]) === 'object') {
-      for (let i in personalMovieDB[key]) {
+for (let key in personalMovieDB) {
+  if (typeof (personalMovieDB[key]) === 'object') {
+    for (let i in personalMovieDB[key]) {
       console.log(`Asjhio ${i} asfjhasf ${personalMovieDB[key][i]}`);
     }
   }
-    console.log(`Asjhio ${key} asfjhasf ${personalMovieDB[key]}`);
+  console.log(`Asjhio ${key} asfjhasf ${personalMovieDB[key]}`);
 }
 personalMovieDB.genres.push('asd');
 console.log(personalMovieDB.genres);
@@ -182,7 +179,7 @@ console.log(personalMovieDB.genres);
 
 const arr = [1, 2, 3, 4, 8, 12];
 
-arr.forEach(function(item, i, arr) {
+arr.forEach(function (item, i, arr) {
   console.log(`${i}: ${item} внутри массива ${arr}`);
 });
 
@@ -199,13 +196,13 @@ arr.forEach(function(item, i, arr) {
 // }
 
 let a = 5,
-    b = a;
-    b = b + 5;
-    console.log(b);
+  b = a;
+b = b + 5;
+console.log(b);
 
 const obj = {
-    a: 5,
-    b: 1
+  a: 5,
+  b: 1
 };
 // const copy = obj;
 // copy.a = 10;
@@ -260,8 +257,8 @@ console.log(newArray);
 console.log(oldArray);
 
 const video = ['youtube', 'vimeo', 'rutube'],
-      blogs = ['wordpress', 'asdfas', 'asda'],
-      internet = [...video, ...blogs, 'vk', 'facebook'];
+  blogs = ['wordpress', 'asdfas', 'asda'],
+  internet = [...video, ...blogs, 'vk', 'facebook'];
 
 console.log(internet);
 
@@ -277,7 +274,9 @@ const q = {
   one: 1,
   two: 2
 };
-const newQ = {...q};
+const newQ = {
+  ...q
+};
 console.log(newQ);
 
 
@@ -298,7 +297,7 @@ console.log(newQ);
 // };
 
 // function showExperience(plan) {
-  
+
 //   const {exp} = pla.skills;
 //   console.log(exp);
 // }
@@ -306,13 +305,13 @@ console.log(newQ);
 
 // console.log(Object.keys(personalMovieDB).length);
 //  console.log(personalMovieDB["actors"]["colors"]);
- for (let key in personalMovieDB) {
-   if (typeof(personalMovieDB[key]) === 'object') {
-      for (let i in personalMovieDB[key]) {
+for (let key in personalMovieDB) {
+  if (typeof (personalMovieDB[key]) === 'object') {
+    for (let i in personalMovieDB[key]) {
       console.log(`Asjhio ${i} asfjhasf ${personalMovieDB[key][i]}`);
     }
   }
-    console.log(`Asjhio ${key} asfjhasf ${personalMovieDB[key]}`);
+  console.log(`Asjhio ${key} asfjhasf ${personalMovieDB[key]}`);
 }
 personalMovieDB.genres.push('asd');
 console.log(personalMovieDB.genres);
@@ -321,19 +320,23 @@ const personalPlanPeter = {
   name: "Peter",
   age: "29",
   skills: {
-      languages: ['ru', 'eng'],
-      programmingLangs: {
-          js: '20%',
-          php: '10%'
-      },
-      exp: '1 month'
+    languages: ['ru', 'eng'],
+    programmingLangs: {
+      js: '20%',
+      php: '10%'
+    },
+    exp: '1 month'
   },
-  showAgeAndLangs: function(plan) {
-    const {languages} = plan.skills;
-    const {age} = plan;
+  showAgeAndLangs: function (plan) {
+    const {
+      languages
+    } = plan.skills;
+    const {
+      age
+    } = plan;
     let str = `Мне ${age} и я владею языками: `;
 
-    languages.forEach(function(lang) {
+    languages.forEach(function (lang) {
       str += `${lang.toUpperCase()} `;
     });
 
@@ -345,7 +348,9 @@ console.log(personalPlanPeter.showAgeAndLangs(personalPlanPeter));
 
 function showProgrammingLangs(plan) {
   let str = '';
-  const {programmingLangs} = plan.skills;
+  const {
+    programmingLangs
+  } = plan.skills;
   for (let key in programmingLangs) {
     str += `Язык ${key} изучен на ${programmingLangs[key]}\n`;
   }
@@ -361,11 +366,11 @@ function showFamily(arr) {
 
   if (arr.length === 0) {
     str = 'Семья пуста';
-  }else {
+  } else {
     str = 'Семья состоит из: ';
   }
 
-  arr.forEach(function(name) {
+  arr.forEach(function (name) {
     str += `${name} `;
   });
   return str;
@@ -376,10 +381,11 @@ console.log(showFamily(family));
 
 const favoriteCities = ['liSBon', 'ROME', 'miLan', 'Dublin'];
 favoriteCities.reverse();
+
 function standardizeStrings(arr) {
-    arr.forEach(function(city) {
-      console.log(`${city.toLowerCase()}`);
-    });
+  arr.forEach(function (city) {
+    console.log(`${city.toLowerCase()}`);
+  });
 }
 standardizeStrings(favoriteCities);
 
@@ -387,7 +393,7 @@ standardizeStrings(favoriteCities);
 const someString = 'This is some strange string';
 
 function reverse(str) {
-  if (typeof(str) !== 'string') {
+  if (typeof (str) !== 'string') {
     return 'Ошибка!';
   }
   return str.split('').reverse().join('');
@@ -404,22 +410,79 @@ function availableCurr(arr, missingCurr) {
   arr.lenght === 0 ? str = 'Нет доступных валют' : str = "Достпуные валюты:\n";
 
 
-  let str = '';
-  arr.length === 0 ? str = 'Нет доступных валют' : str = 'Доступные валюты:\n';
-
-  arr.forEach(function(curr, i) {
-      if (curr !== missingCurr) {
-          str += `${curr}\n`;
-      }
-  });
-
-
-  arr.forEach(function(curr) {
+  arr.forEach(function (curr) {
     if (curr !== missingCurr) {
-        str += `${curr}\n`;
+      str += `${curr}\n`;
     }
   });
 
   return str;
 }
-console.log(availableCurr([...baseCurrencies, ...additionalCurrencies])).
+console.log(availableCurr([...baseCurrencies, ...additionalCurrencies]));
+
+
+const shoppingMallData = {
+  shops: [{
+      width: 10,
+      length: 5
+    },
+    {
+      width: 15,
+      length: 7
+    },
+    {
+      width: 20,
+      length: 5
+    },
+    {
+      width: 8,
+      length: 10
+    }
+  ],
+  height: 5,
+  moneyPer1m3: 30,
+  budget: 50000
+};
+
+function isBudgetEnough(data) {
+  let square = 0;
+  let cube = 0;
+
+  data.shops.forEach(shop => {
+    square += shop.width * shop.height;
+  });
+
+  cube = data.height * square;
+
+  if (data.budget - (cube * data.moneyPer1m3) >= 0) {
+    return 'Бюджета достаточно';
+  } else {
+    return 'Бюджета недостаточно';
+  }
+}
+console.log(isBudgetEnough(shoppingMallData));
+
+
+const students = ['Peter', 'Andrew', 'Ann', 'Mark', 'Josh', 'Sandra', 'Cris', 'Bernard', 'Takesi', 'Sam'];
+
+function sortStudentsByGroups(arr) {
+    arr.sort();
+    const a = [], b = [], c = [], rest = [];
+
+    for (let i = 0; i < arr.length; i++) {
+        if (i < 3) {
+            a.push(arr[i]);
+        } else if (i < 6) {
+            b.push(arr[i]);
+        } else if (i < 9) {
+            c.push(arr[i]);
+        } else {
+            rest.push(arr[i]);
+        }
+    }
+    return [a,b,c, `Оставшиеся студенты: ${rest.length === 0 ? '-' : rest.join(', ')}`]
+}
+
+sortStudentsByGroups(students);
+console.log(sortStudentsByGroups(students));
+            
