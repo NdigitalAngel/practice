@@ -485,4 +485,4 @@ function sortStudentsByGroups(arr) {
 
 sortStudentsByGroups(students);
 console.log(sortStudentsByGroups(students));
-            
+            funckasd()
